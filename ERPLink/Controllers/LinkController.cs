@@ -20,7 +20,7 @@ namespace ERPLink.Controllers
             string link = _config[code];
             if(link == null)
             {
-                return BadRequest("Invalid Company Code");
+                return Ok("https://demo.erp.progbiz.io");
             }
             return Ok(link);
         }
