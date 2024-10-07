@@ -18,9 +18,13 @@ namespace ERPLink.Controllers
         public async Task<IActionResult>GetLink(string code)
         {
             string link = _config[code];
-            if(link == null)
+            
+            if (link == null)
             {
-                return Ok("https://demo.erp.progbiz.io");
+                if (code.Contains("Test"))
+                    return Ok("https://test.erp.progbiz.io");
+                else
+                    return Ok("https://demo.erp.progbiz.io");
             }
             return Ok(link);
         }
