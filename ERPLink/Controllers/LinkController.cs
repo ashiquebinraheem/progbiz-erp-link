@@ -21,8 +21,10 @@ namespace ERPLink.Controllers
             
             if (link == null)
             {
-                if (code.ToLower().Contains("test"))
-                    return Ok("https://erptest.prog-biz.com");
+                if (code.ToLower().Contains("_test"))
+                    return Ok("https://erptest.progbiz.in");
+                else if (code.ToLower().Contains("_dev"))
+                    return Ok("https://devtest.progbiz.in");
                 else
                     return Ok("https://erp.progbiz.io");
             }
