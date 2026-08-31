@@ -22,9 +22,9 @@ namespace ERPLink.Controllers
             if (link == null)
             {
                 if (code.ToLower().Contains("_test"))
-                    return Ok(_config["DevTest"]);
+                    return Ok(_config["Test"]);
                 else if (code.ToLower().Contains("_dev"))
-                    return Ok(_config["DevTest"]);
+                    return Ok(_config["Dev"]);
                 if (code.ToLower().Contains("_poc"))
                     return Ok(_config["POC"]);
                 else
